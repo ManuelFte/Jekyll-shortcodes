@@ -16,11 +16,11 @@ Collection of shortcodes I use to insert stuff in my Jekyll blogs.
   
     ```
     {% include link.html
-    title="Title of the article (Optional. If not specified, it'll take the title of the post it's embedded in)"
-    url="https://example.com"
-    author="Author of the linked article"
-    site="Name of the linked site"
-    image="/path/to/thumbnail.jpg (Optional. If not specified, it'll take the thumbnail of the article it's embedded in."
+        title="Title of the article (Optional. If not specified, it'll take the title of the post it's embedded in)"
+        url="https://example.com"
+        author="Author of the linked article"
+        site="Name of the linked site"
+        image="/path/to/thumbnail.jpg (Optional. If not specified, it'll take the thumbnail of the article it's embedded in."
     %}
     ```
 
