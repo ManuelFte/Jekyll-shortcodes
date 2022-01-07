@@ -1,0 +1,15 @@
+{% assign src = include.src %}
+{% assign srcparts = src | split: "/" %}
+{% assign file = srcparts[-1] %}
+{% assign fileparts = file | split: "." %}
+{% assign filename = fileparts[0] %}
+{% assign format = fileparts[1] %}
+{% case format %}
+  {% when "mp3" %}
+     {% assign type = "mpeg" %}
+  {% when "ogg" %}
+    {% assign type = "ogg" %}
+{% endcase %}
+<audio class="html5-audio" id="{{ filename }}" style="display: block; margin: 0 auto; min-width: 60%; outline: none;" controls controlsList="nodownload" preload="none">
+  <source src="{{ src }}" type="audio/{{ type }}">
+</audio>
