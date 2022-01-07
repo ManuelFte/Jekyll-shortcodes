@@ -1,0 +1,15 @@
+{% assign id = include.id %}
+<p style="text-align: center;">
+  <iframe
+    class="spotify-track"
+    id="{{ id }}"
+    src="https://open.spotify.com/embed/track/{{ id }}"
+    width="580"
+    height="580"
+    frameborder="0"
+    allowtransparency="true"
+    allow="encrypted-media"
+    style="height: 80px; max-width: 100%;"
+  >
+  </iframe>
+</p>

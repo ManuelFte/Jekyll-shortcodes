@@ -12,6 +12,10 @@ Collection of shortcodes I use to insert stuff in my Jekyll blogs.
   
     `{% include googledoc.html file="/path/to/file.pdf" %}`
 
++ [spotify.html](./spotify.html) - Embeds a Spotify song. ([DEMO](https://mini.manuel.life/eagles-waiting-in-the-weeds/))
+
+    `{% include spotify.html id="song-id" %}`
+
 + [video.html](./video.html) - Embeds a video file using HTML5. ([DEMO](https://mini.manuel.life/agatha-all-along/))
 
     `{% include video.html src="/path/to/video.mp4" poster="/path/to/image.jpg" %}`
