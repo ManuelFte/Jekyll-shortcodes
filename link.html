@@ -1,0 +1,25 @@
+{% if include.title %}
+  {% assign title = include.title %}
+{% else %}
+  {% assign title = page.title %}
+{% endif %}
+{% if include.img %}
+  {% assign img = include.img %}
+{% else %}
+  {% assign img = page.image %}
+{% endif %}
+{% if include.alt %}
+  {% assign alt = include.alt %}
+{% else %}
+  {% assign alt = include.img | split: '/' | last | split: '.' | first | replace: '-', ' ' %}
+{% endif %}
+{% if include.desc %}
+  {% assign desc = include.desc %}
+{% else %}
+  {% assign desc = page.description %}
+{% endif %}
+<figure>
+    <p><a href="{{ include.url }}" target="_blank"><strong>{{ title }}</strong></a></p>
+    <p><a href="{{ include.url }}" target="_blank"><img src="{{ img }}" alt="{{ alt }}"></a></p>
+    <figcaption><a href="{{ include.url }}" target="_blank">{{ desc }}... - {{ include.author }} ({{ include.site }})</a></figcaption>
+</figure>
