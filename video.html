@@ -1,0 +1,11 @@
+<!-- Usage: {% include video.html src="PATH_TO_VIDEO" poster="PATH_TO_IMAGE" %} -->
+{% assign src = include.src %}
+{% assign srcparts = src | split: "/" %}
+{% assign file = srcparts[-1] %}
+{% assign fileparts = file | split: "." %}
+{% assign filename = fileparts[0] %}
+{% assign format = fileparts[1] %}
+<video class="html5-video" id="{{ filename }}" width="800" height="450" style="background-color: black; display: block; margin: 0 auto; max-width: 100%; min-width: 60%; outline: none;"  {% if include.poster %}poster="{{ include.poster }}"{% endif %} controls controlsList="nodownload" preload="none">
+  <source src="{{ src }}" type="video/{{ format }}" />
+  Your browser does not support the video tag.
+</video>
