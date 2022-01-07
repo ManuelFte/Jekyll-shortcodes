@@ -1,0 +1,16 @@
+{% if include.file contains '://' %}
+  {% assign file = include.file %}
+{% else %}
+  {% assign file = include.file | prepend: site.baseurl | prepend: site.url %}
+{% endif %}
+<p style="text-align: center;">
+  <iframe
+    class="google-doc"
+    src="http://docs.google.com/gview?url={{ file }}&embedded=true"
+    frameborder="0"
+    width="800"
+    height="530"
+    style="max-width: 100%;"
+  >
+  </iframe>
+</p>
